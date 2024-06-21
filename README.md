@@ -10,10 +10,10 @@
 
 This repository comprises of two kinds of workspaces:
 
-- **Packages**: Primitives for building decentralized applications on Solana. These provide basic building blocks for building Solana-first dApps, making them easy to use for the end user.
+- **Packages**:
   - [**Core**](./packages/core): The core package provides the basic building blocks for building Solana-first dApps.
   - [**React**](./packages/react): The React package provides a React hooks for building Solana-first dApps, making them easy to use for the end user.
-- **Apps**: These are the official applications built on top of Cascade.
+- **Apps**:
   - [**Cascade Explorer**](./apps/explorer): The Cascade Explorer is a web application that allows users to explore the Solana blockchain and interact with programs deployed on Solana or any SVM Rollup.
   - [**Cascade Wallet**](./apps/wallet): The Cascade Wallet is a web application that allows users to interact with programs deployed on Solana or any SVM Rollup.
 
