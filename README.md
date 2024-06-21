@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/mirrorworld-universe/cascade-protocol">
-    <img src="https://raw.githubusercontent.com/chakra-ui/chakra-ui/main/media/logos/cascade-logotype.png?raw=true" alt="Cascade logo" width="300" />
+    <img src="https://github.com/mirrorworld-universe/cascade/blob/main/media/logos/cascade-logotype.png?raw=true" alt="Cascade logo" width="300" />
   </a>
 </p>
 
