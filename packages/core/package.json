@@ -1,0 +1,27 @@
+{
+  "name": "@cascade-protocol/core",
+  "version": "0.0.0",
+  "description": "Core utilitiies used by Cascade Primitives",
+  "dependencies": {},
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "import": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    },
+    "require": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "clean": "rimraf dist .turbo",
+    "build": "tsup && pnpm build:types",
+    "build:fast": "tsup",
+    "build:types": "tsup src --experimental-dts",
+    "types:check": "tsc --noEmit"
+  }
+}

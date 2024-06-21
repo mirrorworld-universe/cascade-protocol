@@ -1,0 +1,16 @@
+{
+  "name": "@cascade-protocol/react",
+  "version": "0.0.0",
+  "description": "React primitives for Cascade",
+  "main": "index.ts",
+  "dependencies": {
+    "@cascade-protocol/core": "workspace:*"
+  },
+  "scripts": {
+    "clean": "rimraf dist .turbo",
+    "build": "tsup && pnpm build:types",
+    "build:fast": "tsup",
+    "build:types": "tsup src --experimental-dts",
+    "types:check": "tsc --noEmit"
+  }
+}

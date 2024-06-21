@@ -1,0 +1,16 @@
+{
+  "name": "cascade-protocol",
+  "description": "Cascade Protocol is a set of client-side tools and libraries for building decentralized web applications with ease.",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "nx run-many -t build"
+  },
+  "devDependencies": {
+    "@microsoft/api-extractor": "^7.47.0",
+    "nx": "19.3.0",
+    "tsup": "^8.1.0"
+  }
+}
