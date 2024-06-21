@@ -2,6 +2,6 @@
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "defaultBase": "main",
   "release": {
-    "projects": ["packages/*"]
+    "projects": ["packages/*", "apps/*"]
   }
 }

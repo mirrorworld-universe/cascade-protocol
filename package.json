@@ -3,7 +3,8 @@
   "description": "Cascade Protocol is a set of client-side tools and libraries for building decentralized web applications with ease.",
   "private": true,
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "apps/*"
   ],
   "scripts": {
     "build": "nx run-many -t build"
