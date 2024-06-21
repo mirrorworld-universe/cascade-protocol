@@ -1,6 +1,12 @@
+@import url(./fonts.css);
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --font-sans: "Manrope";
+}
  
 @layer base {
   :root {
