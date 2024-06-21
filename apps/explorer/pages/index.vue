@@ -10,7 +10,8 @@ import { onServerPrefetch } from "vue";
 
 const { data, suspense } = useQuery({
   queryKey: ["test"],
-  queryFn: getSupply,
+  queryFn: () => getSupply(),
+  refetchInterval: 60000,
 });
 
 onServerPrefetch(async () => {

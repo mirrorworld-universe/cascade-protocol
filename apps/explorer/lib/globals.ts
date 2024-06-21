@@ -2,7 +2,13 @@
 
 import { Buffer } from "buffer";
 import process from "process";
+import { canUseDOM } from "./dom";
 
-window.global = window;
-window.Buffer = Buffer;
-window.process = process;
+export function initializeGlobals() {
+  if (!canUseDOM()) return;
+  window.global = window;
+  window.Buffer = Buffer;
+  window.process = process;
+}
+
+initializeGlobals();
