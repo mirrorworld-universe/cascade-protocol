@@ -6,6 +6,7 @@
 
 :root {
   --font-sans: "Manrope";
+  --font-mono: "IBM Plex Mono";
 }
  
 @layer base {
@@ -81,4 +82,8 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+pre, code {
+  font-family: var(--font-mono);
 }

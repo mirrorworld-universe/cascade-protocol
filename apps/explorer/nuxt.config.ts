@@ -2,7 +2,6 @@ import { loadEnv } from "vite";
 
 const env = loadEnv(process.env.NODE_ENV || "development", process.cwd(), "");
 
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   app: {
     head: {
@@ -35,6 +34,9 @@ export default defineNuxtConfig({
      * @default "./components/ui"
      */
     componentDir: "./components/ui",
+  },
+  alias: {
+    "@cascade-protocol/core": "../../packages/core/src/index.ts",
   },
   vite: {
     define: {

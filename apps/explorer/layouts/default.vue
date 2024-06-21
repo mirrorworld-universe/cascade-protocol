@@ -1,5 +1,6 @@
 <template>
-  <main>
+  <main class="flex flex-col min-h-screen">
+    <MoleculesTopNavigation />
     <slot />
   </main>
 </template>
