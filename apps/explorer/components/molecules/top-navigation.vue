@@ -10,6 +10,7 @@
       <NuxtLink
         href="https://github.com/mirrorworld-universe/cascade-protocol"
         target="_blank"
+        class="ml-auto"
       >
         <GithubLogoIcon class="ml-auto h-5 w-5 text-black" />
       </NuxtLink>

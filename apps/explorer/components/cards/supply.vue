@@ -1,5 +1,5 @@
 <template>
-  <Card class="min-w-[420px]">
+  <Card class="min-w-[380px]">
     <CardHeader
       class="flex flex-row items-center justify-between space-y-0 pb-2"
     >
@@ -20,8 +20,6 @@
 </template>
 
 <script setup lang="ts">
-import { useQuery } from "@tanstack/vue-query";
-import { getSupply } from "../../queries/helpers/stats";
 import { onServerPrefetch } from "vue";
 import {
   SOL,

@@ -9,6 +9,7 @@
       <CardHeader class="text-2xl font-bold p-0">{{
         formattedPrice
       }}</CardHeader>
+      <p class="text-xs text-muted-foreground">Refreshes every 2 seconds.</p>
     </CardContent>
   </Card>
 </template>
