@@ -7,7 +7,10 @@
     </CardHeader>
     <CardContent class="flex flex-col items-start justify-center gap-2">
       <div class="text-2xl font-bold">{{ circulatingSupply }}</div>
-      <Progress v-model="circulatingSupplyPercentageNormalized" class="w-3/5" />
+      <Progress
+        :model-value="circulatingSupplyPercentageNormalized"
+        class="w-3/5"
+      />
       <p class="text-xs text-muted-foreground">
         {{ circulatingSupplyPercentageString }} of {{ totalSupply }} in
         circulation.

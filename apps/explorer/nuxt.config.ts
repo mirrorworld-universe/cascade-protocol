@@ -1,4 +1,5 @@
 import { loadEnv } from "vite";
+import { nodePolyfills } from "vite-plugin-node-polyfills";
 
 const env = loadEnv(process.env.NODE_ENV || "development", process.cwd(), "");
 
@@ -42,5 +43,12 @@ export default defineNuxtConfig({
     define: {
       "process.env": env,
     },
+    plugins: [
+      nodePolyfills({
+        globals: {
+          process: true,
+        },
+      }),
+    ],
   },
 });
