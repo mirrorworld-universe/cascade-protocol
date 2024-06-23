@@ -28,12 +28,9 @@ import {
   lamportsToSol,
   lamportsToSolString,
 } from "@cascade-protocol/core";
+import { useStats } from "../../queries/helpers/use-stats";
 
-const { data, suspense } = useQuery({
-  queryKey: ["test"],
-  queryFn: () => getSupply(),
-  refetchInterval: 2000,
-});
+const { data, suspense } = useStats();
 
 onServerPrefetch(async () => {
   await suspense();
