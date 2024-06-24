@@ -2,7 +2,9 @@
   "name": "@cascade-protocol/core",
   "version": "0.0.0",
   "description": "Core utilitiies used by Cascade Primitives",
-  "dependencies": { "@solana/web3.js": "tp3" },
+  "dependencies": {
+    "@solana/web3.js": "tp3"
+  },
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
