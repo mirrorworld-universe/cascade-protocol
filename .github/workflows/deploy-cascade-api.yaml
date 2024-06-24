@@ -1,0 +1,48 @@
+# Create Github Workflow to deploy the "@cascade-protocol/api" to AWS if there are any changes
+
+name: Deploy Cascade API Functions
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "apps/api"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
+
+      - name: Setup Node.js environment
+        uses: oven-sh/setup-bun@v1
+
+      - name: Install dependencies
+        run: bun ci
+
+      - name: Install AWS CDK
+        run: bun add --global aws-cdk
+
+      - name: Configure aws credentials
+        uses: aws-actions/configure-aws-credentials@master
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY }}
+          aws-region: "us-west-2"
+
+      - name: Build Cascade API Function
+        run: bun nx build @cascade-protocol/api
+
+      - name: Synth stack
+        run: bun run --filter @cascade-protocol/api cdk synth
+
+      - name: Synth stack
+        run: bun run --filter @cascade-protocol/api cdk synth
+
+      - name: Deploy stack
+        run: bun run --filter @cascade-protocol/api cdk deploy --all --require-approval never
