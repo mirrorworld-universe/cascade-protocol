@@ -24,7 +24,9 @@ jobs:
         uses: oven-sh/setup-bun@v1
 
       - name: Install dependencies
-        run: bun ci
+        run: |
+          bun install --ci
+          bun install --yarn
 
       - name: Install AWS CDK
         run: bun add --global aws-cdk
