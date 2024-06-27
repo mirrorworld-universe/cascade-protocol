@@ -42,10 +42,7 @@ jobs:
         run: bun nx build @cascade-protocol/api
 
       - name: Synth stack
-        run: bun run --filter @cascade-protocol/api cdk synth
-
-      - name: Synth stack
-        run: bun run --filter @cascade-protocol/api cdk synth
+        run: bun run --filter=@cascade-protocol/api cdk synth
 
       - name: Deploy stack
-        run: bun run --filter @cascade-protocol/api cdk deploy --all --require-approval never
+        run: bun run --filter=@cascade-protocol/api cdk deploy --all --require-approval never
