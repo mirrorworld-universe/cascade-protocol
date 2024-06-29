@@ -28,6 +28,9 @@
   "exclude": [
     "node_modules",
     "cdk.out",
-    "test"
+    "test",
+    "tsup.config.ts",
+    "drizzle.config.ts",
+    "db"
   ]
 }
