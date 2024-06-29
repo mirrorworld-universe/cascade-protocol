@@ -178,3 +178,4 @@ dist
 
 .nx/cache
 .nx/workspace-data
+apps/api/.env
