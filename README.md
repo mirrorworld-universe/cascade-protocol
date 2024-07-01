@@ -34,6 +34,32 @@ To install the dependencies, run `bun install`.
 bun install
 ```
 
+## Local database setup (optional)
+
+We use PostgresQL to store a few things:
+
+- Price history for the SOL in USD
+
+This in only optional, and is used to ensure that migrations are executed will for further additions to the stack.
+
+Install Postgres locally and create a local database called `cascade_db_local`.
+
+Create a `.env` file in the `apps/api/.env` directory with the following variables:
+
+```env
+DATABASE_USERNAME=
+DATABASE_PASSWORD=
+DATABASE_HOST=127.0.0.1
+DATABASE_PORT=5432
+DATABASE_NAME="cascade_db_local"
+```
+
+Run the migration script:
+
+```sh
+bun run --filter=@cascade-protocol/api ./db/migrate.ts
+```
+
 ## Contributing
 
 Feel like contributing? That's awesome! We have a
