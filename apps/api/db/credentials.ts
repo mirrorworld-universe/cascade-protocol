@@ -59,6 +59,8 @@ export async function getDatabaseCredentials(): Promise<
         host: dbhost,
       };
 
+      // console.log("database credentials", credentials);
+
       return credentials;
     } else {
       throw new Error("No secret string found");

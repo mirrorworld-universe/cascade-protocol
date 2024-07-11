@@ -14,7 +14,9 @@ app.get("/hello/:name", (c) => {
 
 app.get("/migrate", async () => {
   const { db } = await createDatabaseConnection();
-  await migrate(db, { migrationsFolder: resolve(__dirname, "./drizzle") });
+  const migrationsDirectory = resolve(__dirname, "../db/drizzle");
+  console.log("debug: running migrations from: ", migrationsDirectory);
+  await migrate(db, { migrationsFolder: migrationsDirectory });
 });
 
 export const handler = handle(app);
