@@ -9,6 +9,11 @@ import { migrate } from "drizzle-orm/node-postgres/migrator";
 import { db, client } from "./db.migrate";
 
 // This will run migrations on the database, skipping the ones already applied
-await migrate(db, { migrationsFolder: resolve(__dirname, "./drizzle") });
+const MIGRATIONS_FOLDER = resolve(__dirname, "./drizzle");
+console.log(
+  "Migrating database from migrations directory...",
+  MIGRATIONS_FOLDER
+);
+await migrate(db, { migrationsFolder: MIGRATIONS_FOLDER });
 // Don't forget to close the connection, otherwise the script will hang
 await client.end();
