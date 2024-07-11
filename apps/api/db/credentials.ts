@@ -24,7 +24,7 @@ export interface DatabaseCredentials {
 export async function getDatabaseCredentials(): Promise<
   Omit<DatabaseCredentials, "dbhost">
 > {
-  const secretName = process.env.DATABASE_SECRETS_NAME;
+  const secretName = process.env.POSTGRES_SECRET_ARN;
 
   if (!secretName) {
     return {
