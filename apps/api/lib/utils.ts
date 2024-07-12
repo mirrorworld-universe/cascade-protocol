@@ -1,6 +1,7 @@
 import * as fs from "fs";
 import * as crypto from "crypto";
 import * as path from "path";
+import * as glob from "glob";
 
 /**
  * Compute the hash of a directory by hashing the content of all files in the directory
@@ -8,7 +9,7 @@ import * as path from "path";
  * @returns
  */
 export const computeDirectoryHash = (dir: string) => {
-  const files = fs.readdirSync(dir);
+  const files = glob.sync("**/*", { cwd: dir, nodir: true });
 
   const fileHashes = files.map((f) => {
     const fileContent = fs.readFileSync(path.join(dir, f), "utf-8");
