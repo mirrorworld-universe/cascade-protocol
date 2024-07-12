@@ -6,7 +6,6 @@
       "es2020",
       "dom"
     ],
-    // "types": ["@types/jest"],
     "declaration": true,
     "strict": true,
     "noImplicitAny": true,
@@ -22,10 +21,15 @@
     "experimentalDecorators": true,
     "skipLibCheck": true,
     "strictPropertyInitialization": false,
-    "typeRoots": [
-      "./node_modules/@types"
-    ]
+    // "typeRoots": [
+    //   "./node_modules/@types"
+    // ]
   },
+  "include": [
+    "src/**/*.ts",
+    "lib/**/*.ts",
+    "bin/**/*.ts",
+  ],
   "exclude": [
     "node_modules",
     "cdk.out",
