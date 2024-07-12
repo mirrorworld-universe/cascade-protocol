@@ -8,6 +8,20 @@
       "when": 1720790381774,
       "tag": "0000_moaning_cyclops",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1720803796333,
+      "tag": "0001_solid_the_executioner",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1720803831211,
+      "tag": "0002_robust_ultimatum",
+      "breakpoints": true
     }
   ]
 }
