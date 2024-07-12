@@ -22,6 +22,13 @@
       "when": 1720803831211,
       "tag": "0002_robust_ultimatum",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1720804152314,
+      "tag": "0003_minor_terror",
+      "breakpoints": true
     }
   ]
 }
