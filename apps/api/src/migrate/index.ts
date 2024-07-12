@@ -28,7 +28,7 @@ export const handler = async (
 
   try {
     const { db } = await createDatabaseConnection();
-    const migrationsDirectory = resolve(__dirname, "../db/drizzle");
+    const migrationsDirectory = resolve(__dirname, "./drizzle");
     console.log("debug: running migrations from: ", migrationsDirectory);
     await migrate(db, {
       migrationsFolder: migrationsDirectory,
